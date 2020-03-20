@@ -1,0 +1,144 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This is a modified ONE COLUMN version of
+% the following template:
+%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.1 (30/4/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\documentclass[]{deedy-resume-openfont}
+
+	\begin{document}
+    
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     Profile
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{Mark}{Obad}{mark.obad@gmail.com | 604-367-2075 | Vancouver, BC Canada | linkedin.com/in/markobad/}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     Experience
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Work Experience}
+\runsubsection{SAP}\descript{| Developer}\hfill \location{Vancouver, BC Canada | Aug 2017 – Present}
+\begin{tightemize}
+	\item Maintained and added functionality to a multi-dimensional OLAP database built on top of SAP HANA (C++)
+	\item Implemented a remote blending protocol for joining local and remote data sources together
+	\item Optimized the remote blending protocol to significantly reduce its compressed serialized size and greatly increasing its performance
+	\item Maintained an older Java REST database connector and replaced it with a simpler Rust implementation
+\end{tightemize}
+\sectionsep
+\runsubsection{Simba Technologies}\descript{| Computer Scientist}\hfill \location{Vancouver, BC Canada | Aug 2015 – Jul 2017}
+\begin{tightemize}
+	\item Designed and maintained a high performance database wire protocol (C++)
+	\item Developed a JDBC client of said wire protocol (Java)
+	\item Performed extensive profiling and optimization to make the wire protocol perform consistently 2x+ faster than the Postgres Wire Protocol
+	\item Identified and fixed many hard to replicate bugs that helped improve the overall stability and performance of the product
+\end{tightemize}
+\sectionsep
+\runsubsection{Point Grey Research}\descript{| Software Developer Co-op}\hfill \location{Richmond, BC Canada | May 2013 – Dec 2013}
+\begin{tightemize}
+	\item Responsible for developing and maintaining software capable of testing approximately 50 cameras simultaneously while communicating with several external devices (C\#)
+	\item Created a command line version of the camera testing software to automate nightly testing using multiple cameras (C\#)
+	\item Developed a build versioning system to automatically version various company software with a globally unique incrementing version (Perl, MSSQL)
+	\item Added barcode reading functionality to a camera board programming robot (C\#)
+\end{tightemize}
+\sectionsep
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     Skills
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Skills}
+\raggedright
+\begin{tabular}{ l l }
+	\descript{Programming Languages} & {\location{C++, Java, Rust, C\#, Python, Go, Bash}}            \\
+	\descript{Software}              & {\location{Git, SQL, OLAP, GDB, Ghidra, Wireshark, Linux}} \\
+\end{tabular}
+\sectionsep
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     Education
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Education}
+\raggedright
+
+\runsubsection{University of British Columbia}\descript{| BS Computer Science}\hfill \location{Vancouver, BC Canada | May 2015}\\
+    
+\sectionsep
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     Patents
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Patents}
+\runsubsection{\large{Remote data blending}} \descript{US20190347350A1 (Pending) | Jul 2018} \\
+\sectionsep
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     Awards
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Awards}
+\runsubsection{\large{1st place in SAP Cyber Security Month CTF 2019}} \descript{SAP | Oct 2019} \\
+Tied for 1st in the Jeopardy style CTF qualification round and 1st in the Attack-Defence finals. Worldwide internal CTF with \textasciitilde{}1000 competitors.\\
+\sectionsep
+\runsubsection{\large{1st place in SAP Cyber Security Month CTF 2018}} \descript{SAP | Oct 2018} \\
+Tied for 1st in the Jeopardy style CTF. Worldwide internal CTF with \textasciitilde{}1000 competitors.\\
+\sectionsep
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     Projects
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Personal Projects}
+\raggedright
+
+\runsubsection{\large{rustichip8}}
+\descript{| Rust}\hfill \location{github.com/mobad/rustichip8}\\
+Basic CHIP-8 emulator written in Rust\\
+\
+\end{document}
